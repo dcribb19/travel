@@ -8,7 +8,6 @@ The purpose of this project is to be able to visualize the states that you have 
 ![text](https://github.com/dcribb19/travel/blob/master/examples/travel_dc.png '1 Person')
 ![text](https://github.com/dcribb19/travel/blob/master/examples/travel_dc_j.png 'Comparing 2 People')
 
-
 ## Technology
 - Python 3.8
 
