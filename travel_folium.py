@@ -1,23 +1,19 @@
-"""
-travel.py - want to create a world map image with countries that I have traveled to, that J has traveled to, and that we have traveled to together. Also want to do the same with U.S. states.
-"""
+# travel.py
+# Create an overlay on the U.S. map of states traveled to.
 
-# import libraries
 import folium
+import os
 
 """
 TODO:
-Add title to map. 
-Change GeoJsons to not show all upon opening
-See if file can be saved other than html
+- Add title to map. 
+- Change GeoJsons to not show all upon opening
+- See if file can be saved other than html
+- Remove people dicts
+- Create new way to enter name and states traveled to.
 """
 
-"""
-load the U.S. states json from folium repo, test folder
-(w/added Washington DC)
-"""
-
-state_geo = 'C:/Users/Daniel/python_projects/travel/us-states.json'
+state_geo = os.path.join(os.getcwd(), 'us-states.json')
 
 dc = {'Name' : 'DC',
       'States' : ['VA', 'NC', 'SC', 'GA', 'FL', 'AL', 'WV', 'DC',
@@ -67,11 +63,11 @@ us_map = folium.Map(location=[39.833333, -98.583333],
                     max_bounds=True,
                    )
 
+
 def state_style(person, color):
     """
     take a person's name and a color to fill in states traveled to
     """
-
     return lambda x: {'fillColor': color if x['id']
                       in person['States'] else 'white',
                       'color': 'black',
@@ -80,20 +76,24 @@ def state_style(person, color):
                       in person['States'] else 0.0
                      }
 
+
 def states_traveled(person, color):
     """
-    Take a person's name and a color to create GeoJson overlay for states that the person has traveled to. Color will be used in style function for fill.
+    Take a person's name and a color to create GeoJson overlay for states that the person has traveled to.
+    Color will be used in style function for fill.
+    Adds overlay to map.
     """
-    return folium.GeoJson(data=state_geo,
-                          name=person['Name'] + ' - '
-                              + str(len(person['States'])),
-                          style_function=state_style(person, color)
-                         )
+    folium.GeoJson(data=state_geo,
+                   name=person['Name'] + ' - '
+                   + str(len(person['States'])),
+                   style_function=state_style(person, color)
+                   ).add_to(us_map)
 
-states_traveled(dc, 'green').add_to(us_map)
-states_traveled(j, 'blue').add_to(us_map)
-states_traveled(camille, 'purple').add_to(us_map)
-states_traveled(debbie, 'brown').add_to(us_map)
+
+states_traveled(dc, 'green')
+states_traveled(j, 'blue')
+states_traveled(camille, 'purple')
+states_traveled(debbie, 'brown')
 
 folium.LayerControl(hideSingleBase=True).add_to(us_map)
 us_map.save('us_map.html')
