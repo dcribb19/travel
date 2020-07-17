@@ -5,8 +5,8 @@ Create overlays on U.S. map of states that you have traveled to.
 The purpose of this project is to be able to visualize the states that you have traveled to and to be able to compare your travels with anyone else. 
 
 ## Examples
-![text](https://github.com/dcribb19/travel/blob/master/examples/travel_1.png '1 Person')
-![text](https://github.com/dcribb19/travel/blob/master/examples/travel_2.png 'Comparing 2 People')
+![text](https://github.com/dcribb19/travel/blob/master/examples/travel_1.png '1 Person')  
+![text](https://github.com/dcribb19/travel/blob/master/examples/travel_2.png 'Comparing 2 People')  
 
 ## Technology
 - Python 3.8
@@ -31,8 +31,8 @@ The purpose of this project is to be able to visualize the states that you have 
     ```python
     states_traveled(person: dict, color: str)
     ```
-- Legend provides total number of states traveled to and allows for selection to compare different people.
-![text](https://github.com/dcribb19/travel/blob/master/examples/legend.png 'Legend')
+- Legend provides total number of states traveled to and allows for selection to compare different people.  
+    ![text](https://github.com/dcribb19/travel/blob/master/examples/legend.png 'Legend')
 - File will be saved as us_map.html.
 
 ## Credits
