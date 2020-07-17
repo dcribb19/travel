@@ -12,7 +12,11 @@ The purpose of this project is to be able to visualize the states that you have 
 - Python 3.8
 
 ## Usage
+- Install folium (if not already installed).
+- Keep travel_folium.py and us-states.json in the same directory.
+- Legend provides total number of states traveled to and allows for selection to compare different people.
 
+- File will be saved as us_map.html.
 
 ## Credits
 - [folium](https://python-visualization.github.io/folium/)
