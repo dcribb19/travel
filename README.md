@@ -1,8 +1,8 @@
 # travel
-Create overlays on U.S. map of states that you have traveled to.
+Create overlays on a map of the U.S. of the states that you have traveled to with a custom color.
 
 ## Motivation
-The purpose of this project is to be able to visualize the states that you have traveled to and to be able to compare your travels with anyone else. 
+The purpose of this project is to be able to visualize the states that you have traveled to and to be able to compare your travels with those of anyone else. 
 
 ## Examples
 ![text](https://github.com/dcribb19/travel/blob/master/examples/travel_1.png '1 Person')  
