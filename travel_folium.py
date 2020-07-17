@@ -1,5 +1,5 @@
 # travel.py
-# Create a personal overlay on the U.S. map of states traveled to.
+# Create a personal overlay on the U.S. map of states traveled to with a custom color.
 
 import folium
 import os
