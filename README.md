@@ -15,7 +15,7 @@ The purpose of this project is to be able to visualize the states that you have 
 - Install folium (if not already installed).
 - Keep travel_folium.py and us-states.json in the same directory.
 - Create a dictionary with the following structure for each person:
- - Value of 'states' should be a list of strings of state abbreviations.
+    - Value of 'states' should be a list of strings of state abbreviations.
 ```python
 person = {
     'name' : 'person_name',
