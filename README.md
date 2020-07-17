@@ -27,7 +27,7 @@ person = {
 states_traveled(person: dict, color: str)
 ```
 - Legend provides total number of states traveled to and allows for selection to compare different people.
--- ![text](https://github.com/dcribb19/travel/blob/master/examples/legend.png 'Legend')
+![text](https://github.com/dcribb19/travel/blob/master/examples/legend.png 'Legend')
 - File will be saved as us_map.html.
 
 ## Credits
