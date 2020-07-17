@@ -23,8 +23,8 @@ The purpose of this project is to be able to visualize the states that you have 
     - Value of 'states' should be a list of strings of state abbreviations.
     ```python
     person = {
-        'name' : 'person_name',
-        'states' : []
+        'Name' : 'person_name',
+        'States' : []
     }
     ```
 - For each person, call the states_traveled function passing the person dictionary and a color string for the fill color you prefer. 
