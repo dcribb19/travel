@@ -13,24 +13,24 @@ The purpose of this project is to be able to visualize the states that you have 
 
 ## Requirements
 - [folium](https://python-visualization.github.io/folium/) 
-```python
-pip install folium
-```
+    ```python
+    pip install folium
+    ```
 
 ## Usage
 - Keep travel_folium.py and us-states.json in the same directory.
 - Create a dictionary with the following structure for each person:
     - Value of 'states' should be a list of strings of state abbreviations.
-```python
-person = {
-    'name' : 'person_name',
-    'states' : []
-}
-```
+    ```python
+    person = {
+        'name' : 'person_name',
+        'states' : []
+    }
+    ```
 - For each person, call the states_traveled function passing the person dictionary and a color string for the fill color you prefer. 
-```python
-states_traveled(person: dict, color: str)
-```
+    ```python
+    states_traveled(person: dict, color: str)
+    ```
 - Legend provides total number of states traveled to and allows for selection to compare different people.
 ![text](https://github.com/dcribb19/travel/blob/master/examples/legend.png 'Legend')
 - File will be saved as us_map.html.
