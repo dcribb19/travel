@@ -11,8 +11,13 @@ The purpose of this project is to be able to visualize the states that you have 
 ## Technology
 - Python 3.8
 
+## Requirements
+- [folium](https://python-visualization.github.io/folium/) 
+```python
+pip install folium
+```
+
 ## Usage
-- Install folium (if not already installed).
 - Keep travel_folium.py and us-states.json in the same directory.
 - Create a dictionary with the following structure for each person:
     - Value of 'states' should be a list of strings of state abbreviations.
@@ -31,7 +36,7 @@ states_traveled(person: dict, color: str)
 - File will be saved as us_map.html.
 
 ## Credits
-- [folium](https://python-visualization.github.io/folium/)
+[folium](https://python-visualization.github.io/folium/)
 
 ## License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
