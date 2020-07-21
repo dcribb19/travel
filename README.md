@@ -10,17 +10,11 @@ The purpose of this project is to be able to visualize the states that you have 
 
 ## Technology
 - Python 3.8
-
-## Requirements
-- [folium](https://python-visualization.github.io/folium/) 
-    ```python
-    pip install folium
-    ```
+- folium 0.11.0
 
 ## Usage
-- Keep travel_folium.py and us-states.json in the same directory.
-- Create a dictionary with the following structure for each person:
-    - Value of 'States' should be a list of strings of state abbreviations.
+- In travel_folium.py, create a dictionary with the following structure for each person:
+    - Value of 'States' should be a list of strings of state abbreviations, such as: ['AL', 'AK', 'CA', 'WA']
     ```python
     person = {
         'Name' : 'person_name',
@@ -31,6 +25,7 @@ The purpose of this project is to be able to visualize the states that you have 
     ```python
     states_traveled(person: dict, color: str)
     ```
+- us-states.json is used to create the overlay.
 - Legend provides total number of states traveled to and allows for selection to compare different people.  
     ![text](https://github.com/dcribb19/travel/blob/master/examples/legend.png 'Legend')
 - File will be saved as us_map.html.
