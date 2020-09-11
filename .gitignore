@@ -1,2 +1,8 @@
 travel_folium_personal.py
 us_map.html
+world_travel_personal.py
+world_map.html
+
+venv/
+.vscode/
+__pycache__/

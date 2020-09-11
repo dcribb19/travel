@@ -1,12 +1,13 @@
-# travel.py
-# Create a personal overlay on the U.S. map of states that you have traveled to with a custom color.
+# travel_folium.py
+# Create a personal overlay on the U.S. map of states
+# that you have traveled to with a custom color.
 
 import folium
 import os
 
 state_geo = os.path.join(os.getcwd(), 'us-states.json')
 
-#initialize map
+# Initialize map
 us_map = folium.Map(location=[39.833333, -98.583333],
                     tiles='CartoDB positron',
                     min_zoom=4,
@@ -17,7 +18,7 @@ us_map = folium.Map(location=[39.833333, -98.583333],
                     min_lon=-180,
                     max_lon=-40,
                     max_bounds=True,
-                   )
+                    )
 
 
 def state_style(person, color):
@@ -30,12 +31,13 @@ def state_style(person, color):
                       'weight': 0.3,
                       'fillOpacity': 0.5 if x['id']
                       in person['States'] else 0.0
-                     }
+                      }
 
 
 def states_traveled(person, color):
     """
-    Take a person's name and a color to create GeoJson overlay for states that the person has traveled to.
+    Take a person's name and a color to create GeoJson overlay
+    for states that the person has traveled to.
     Color will be used in style function for fill.
     Adds overlay to map.
     """
